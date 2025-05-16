@@ -1,14 +1,15 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Football } from 'lucide-react';
+import { BadmintonBird } from 'lucide-react';
 
 const Hero = () => {
   return (
     <div className="relative pt-20 pb-20 md:pt-28 md:pb-28 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <Football className="h-16 w-16 mx-auto text-turf mb-6 animate-float" />
+          <BadmintonBird className="h-16 w-16 mx-auto text-turf mb-6 animate-float" />
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
             <span className="text-gradient">Book Your Perfect</span>
             <br />

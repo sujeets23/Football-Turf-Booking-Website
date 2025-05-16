@@ -1,7 +1,8 @@
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Football } from 'lucide-react';
+import { BadmintonBird } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
 
 const NavBar = () => {
@@ -24,7 +25,7 @@ const NavBar = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
-            <Football className="h-8 w-8 text-turf animate-rotate-slow" />
+            <BadmintonBird className="h-8 w-8 text-turf animate-rotate-slow" />
             <span className="text-xl font-bold text-gradient">TurfBooker</span>
           </Link>
           

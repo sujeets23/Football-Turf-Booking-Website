@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useToast } from '@/components/ui/use-toast';
-import { Football } from 'lucide-react';
+import { BadmintonBird } from 'lucide-react';
 
 type TimeSlot = {
   id: number;
@@ -71,7 +71,7 @@ const BookingCalendar = () => {
     <Card className="neo-blur border-gray-800">
       <CardHeader>
         <CardTitle className="text-gradient text-2xl flex items-center gap-2">
-          <Football className="h-5 w-5" />
+          <BadmintonBird className="h-5 w-5" />
           Book Your Turf
         </CardTitle>
         <CardDescription className="text-gray-400">

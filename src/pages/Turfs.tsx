@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
 import { Slider } from '@/components/ui/slider';
-import { Football } from 'lucide-react';
+import { BadmintonBird } from 'lucide-react';
 
 // Extended turf data for the turfs page
 const turfData: TurfCardProps[] = [
@@ -119,7 +119,7 @@ const Turfs = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-10">
             <div className="inline-block p-2 rounded-full bg-turf/10 mb-3">
-              <Football className="h-6 w-6 text-turf" />
+              <BadmintonBird className="h-6 w-6 text-turf" />
             </div>
             <h1 className="text-4xl font-bold mb-3">
               <span className="text-gradient">Browse</span> Football Turfs
@@ -272,7 +272,7 @@ const Turfs = () => {
                 </div>
               ) : (
                 <div className="neo-blur rounded-lg p-12 text-center">
-                  <Football className="h-12 w-12 text-gray-600 mx-auto mb-4" />
+                  <BadmintonBird className="h-12 w-12 text-gray-600 mx-auto mb-4" />
                   <h3 className="text-xl font-medium text-white mb-2">No turfs found</h3>
                   <p className="text-gray-400 mb-6">
                     Try adjusting your filters or search terms to find available turfs.
