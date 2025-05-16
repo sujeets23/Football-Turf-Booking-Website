@@ -1,11 +1,10 @@
-
 import React, { useState } from 'react';
 import { Calendar } from '@/components/ui/calendar';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useToast } from '@/components/ui/use-toast';
-import { SoccerBall } from 'lucide-react';
+import { Volleyball } from 'lucide-react';
 
 type TimeSlot = {
   id: number;
@@ -72,7 +71,7 @@ const BookingCalendar = () => {
     <Card className="neo-blur border-gray-800">
       <CardHeader>
         <CardTitle className="text-gradient text-2xl flex items-center gap-2">
-          <SoccerBall className="h-5 w-5" />
+          <Volleyball className="h-5 w-5" />
           Book Your Turf
         </CardTitle>
         <CardDescription className="text-gray-400">
