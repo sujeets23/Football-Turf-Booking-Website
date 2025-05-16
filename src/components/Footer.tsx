@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Soccer } from 'lucide-react';
+import { Football } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -10,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="flex flex-col space-y-4">
             <Link to="/" className="flex items-center space-x-2">
-              <Soccer className="h-8 w-8 text-turf" />
+              <Football className="h-8 w-8 text-turf" />
               <span className="text-xl font-bold text-gradient">TurfBooker</span>
             </Link>
             <p className="text-gray-400 text-sm">
