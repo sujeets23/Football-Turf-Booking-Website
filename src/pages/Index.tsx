@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
@@ -7,9 +7,30 @@ import FeaturedTurfs from '@/components/FeaturedTurfs';
 import FootballField from '@/components/3D/FootballField';
 
 const Index = () => {
+  const [showFootballField, setShowFootballField] = useState(false);
+  
+  useEffect(() => {
+    // Delay loading the 3D component to prevent initial render issues
+    const timer = setTimeout(() => {
+      try {
+        setShowFootballField(true);
+      } catch (e) {
+        console.error("Could not load 3D component:", e);
+      }
+    }, 500);
+    
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
-      <FootballField />
+      {showFootballField && 
+        <div className="football-field-container" style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1, opacity: 0.7 }}>
+          <ErrorBoundary>
+            <FootballField />
+          </ErrorBoundary>
+        </div>
+      }
       <div className="min-h-screen flex flex-col">
         <NavBar />
         <main className="flex-grow">
@@ -102,5 +123,26 @@ const Index = () => {
     </>
   );
 };
+
+// Simple error boundary component to catch errors in the 3D component
+class ErrorBoundary extends React.Component {
+  state = { hasError: false };
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error("3D component error:", error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return null; // Return nothing if there's an error
+    }
+    
+    return this.props.children;
+  }
+}
 
 export default Index;
