@@ -4,7 +4,7 @@ import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import BookingCalendar from '@/components/BookingCalendar';
 import FootballField from '@/components/3D/FootballField';
-import { BadmintonBird } from 'lucide-react';
+import { SoccerBall } from 'lucide-react';
 
 const Booking = () => {
   return (
@@ -16,7 +16,7 @@ const Booking = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-10">
               <div className="inline-block p-2 rounded-full bg-turf/10 mb-3">
-                <BadmintonBird className="h-6 w-6 text-turf" />
+                <SoccerBall className="h-6 w-6 text-turf" />
               </div>
               <h1 className="text-4xl font-bold mb-3">
                 <span className="text-gradient">Book</span> Your Turf
