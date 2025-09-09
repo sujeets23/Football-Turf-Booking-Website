@@ -60,7 +60,7 @@ const Footer = () => {
         
         <div className="mt-8 pt-8 border-t border-gray-800 text-center">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} TurfBooker. All rights reserved.
+            © {new Date().getFullYear()} TurfBooker. All rights reserved. Developed By Sujeet
           </p>
         </div>
       </div>
